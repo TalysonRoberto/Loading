@@ -1,0 +1,84 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 100vh; /* Garante que o body ocupe toda a tela */
+    margin: 0; /* Remove margens padrão */
+    background: #17446e;
+    background-size: cover; /* Faz o gradiente cobrir toda a tela */
+}
+
+.container {
+    color: #c2c1c1;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+    justify-content: center; 
+    align-items: center;
+    width: 1100px;
+    height: 700px;
+    padding: 20px; /* Espaço interno da borda */
+    gap: 25px; /* Espaço entre os containers */
+    transition: justify-content 0.5s ease; /* Transição suave */
+}
+
+/*============================================================================*/
+
+.card {
+    display: grid;
+    justify-content: center; /* Centraliza na horizontal */
+    width: 230px;
+    height: 220px;
+    border-radius: 15px;
+    position: relative;
+    background: linear-gradient(to bottom right,#0081a8, #01afba);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -2px; 
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 15px;
+    background: radial-gradient(circle at top right, #74e3f0 5%, #1c6ab4 50%);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+.card::after{
+  content:"";
+  position: absolute;
+  background-color: #132b46;
+  width: 230px;
+  height: 35px;
+  border-radius: 15px 15px 0 0;
+}
+
+.fe-min{
+  display: flex;
+  padding:13px 3px;
+  gap:10px;
+  width:80px;
+  z-index:1;
+}
+
+.cir{
+  height:10px;
+  width:10px;
+  border-radius:50%;
+}
+
+.cir.fec{ background-color: #fd5754; border:solid 1px #A41C1A}
+.cir.min{ background-color: #febb40; border:solid 1px #C58712}
+.cir.max{ background-color: #34c848; border:solid 1px #0c8319}
+
+.loads{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  width:230px;
+  height:200px;
+}
